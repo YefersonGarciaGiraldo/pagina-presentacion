@@ -1,0 +1,157 @@
+@media (min-width: 768px) {
+/*** tamaños de fuente ***/
+/* tamaño base */
+html {
+  font-size: 20px;
+}
+
+
+/*** header ***/
+    /* contenedor general */
+    header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+    }
+
+    .banner-superior{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* elementos dentro del header */
+    header h2{
+        font-size: 2rem;
+    }
+
+
+/*** hero ***/
+    #hero {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 1rem;
+    padding: 2rem;
+    padding-top: 120px;
+    }
+
+    /* modificacion tamaño de fuentes hero */
+    #hero h1 {
+    font-size: 1.5rem; 
+    }
+
+    
+    /* organizar perfil */
+    #organizar-perfil{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        text-align: left;
+        padding-block: 1rem;
+    }
+
+    .informacion-inicial *{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* iconos hero */
+    .iconos-redes{
+    justify-content: left;
+    margin-bottom: 0;
+    }
+
+    .icono-boton {
+    margin-bottom: 10px;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    }
+
+    #experiencia{
+        margin: 0;
+    }
+
+    /* descripcion */
+    #hero p{
+    text-align: center;
+    max-width: 70ch;
+    margin-block: 2rem;
+    line-height: 2;
+    }
+
+/*** presentación ***/
+    /* general */
+    #presentacion{
+    margin-top: 5rem;
+    }
+
+    .bloque h2{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: #1dcaea;
+    }
+
+    /* le quita el margen al primer h2 de la seccion "presentacion" */
+    #presentacion #primer-hijo{
+        margin-top: 0;
+    }
+
+    .sub-bloque h3{
+    margin-bottom: 10px;
+    }
+    /* que busco */
+    .que-busco{
+    margin-bottom: 40px;
+    }
+
+/*** footer ***/
+    /* general */
+    footer{
+    padding: 3rem 2rem 1rem;
+    }
+
+    .proyectos-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    }
+
+    /* ver-proyectos */
+    #ver-proyectos{
+    width: 45%;
+    }
+
+    .boton-git-footer{
+    padding: 10px 5dvb;
+    max-width: 250px;
+    font-size: 1rem;
+    }
+
+    /*contacto footer */
+
+    .informacion-contacto{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+
+    }
+
+    .informacion-contacto p{
+    margin: 0;
+    }
+
+    .informacion-contacto div {
+    gap: 7px;
+    }
+}

@@ -1,0 +1,371 @@
+/* generales */
+*, *::before, *::after {box-sizing: border-box;}
+html{scroll-behavior: smooth;}
+body{margin: 0;}
+section{margin-bottom: 40px;}
+
+/* responsive */
+.contenedor-responsive {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;  
+  margin: 0 auto;     
+}
+
+/*** tamaños de fuente ***/
+/* tamaño base */
+html {
+  font-size: 15px;
+}
+/* tamaños especificos */
+h1 { font-size: 2rem; }   
+h2 { font-size: 1.25rem;}   
+h3 { font-size: 1rem; }
+p,ul { font-size: 0.875rem; }  
+a { font-size: 0.675rem; }
+footer p { font-size: 0.875rem; }
+
+/*** estilo de fuentes ***/
+/* Open Sans */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400 ;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  transition: 0.5s ease, color 0.5s ease;
+}
+
+/* Chau Philomene */
+header h2,#hero h1, footer h2 {
+  font-family: "Chau Philomene One", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* colores de fuente modo claro  */
+.color-acento{
+  color: #1dcaea;
+}
+body{
+  background-color: #f9f9f9;
+  color:#333;
+}
+.hero h1{  
+  color: #171616;
+}
+.contacto a, .contacto-footer p, .contacto-footer a{
+  color: #eaeaea;
+}
+.copyright{
+  color: #606060;
+}
+/* modo oscuro js*/
+body.modo-oscuro, .modo-oscuro #hero h1, .modo-oscuro .icono-boton{
+  background-color: #0c0c0c;
+  color: #f0f0f0;
+}
+.modo-oscuro .icono-boton:hover,.modo-oscuro .color-acento,.modo-oscuro #hero .img-hero, .bloque h2{
+  color: #1dcaea;
+  border-color: #1dcaea;
+}
+
+/*** header ***/
+/* contenedor general */
+header{
+  background-color: #323030;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items:center;
+}
+
+/* elementos dentro del header */
+header h2{
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.contacto {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contacto a {
+  position: relative;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+/* Línea vertical entre enlaces*/
+.contacto a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60%;
+  background-color: #eaeaea;
+}
+
+/*** hero ***/
+#hero {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: space-between; 
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* modificacion tamaño de fuentes hero */
+#hero h1 {
+  font-size: 1.25rem; 
+  margin-bottom: 0.5rem;
+}
+#hero i {font-size: 1.25rem;}
+
+/* imagen */
+#hero .img-hero{
+    background-image: url("img/foto1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-block: 0px;
+    border: 3px solid #1dcaea;
+}
+
+#organizar-perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+/* iconos hero */
+.iconos-redes{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.icono-boton {
+  margin-bottom: 10px;
+  margin-right: 1rem;
+  font-size: 1.75rem;
+  color: #000000 ;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.icono-boton:last-child {
+  margin-right: 0;
+}
+.icono-boton:hover {
+  color: #1199f9;
+}
+
+/* descripcion */
+#hero p{
+  text-align: center;
+  max-width: 70ch;
+  margin-block: 0;
+  line-height: 2;
+}
+
+/*** presentación ***/
+/* general */
+#presentacion{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bloque h2{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.sub-bloque{
+  margin-top: 50px;
+}
+
+.sub-bloque p, ul{
+  list-style: none;
+}
+
+.sub-bloque p {
+  max-width: 70ch;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* que busco */
+.que-busco{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.que-busco p {
+  max-width: 70ch;
+  line-height: 2;
+}
+
+/*** footer ***/
+/* general */
+footer{
+  background-color: #323030;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.proyectos-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+}
+
+/* ver-proyectos */
+#ver-proyectos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.boton-git-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color:#1dcaea;
+  color: #171616;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition:0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.boton-git-footer:hover {
+  background-color: #19abc5;
+}
+
+/*contacto footer */
+.contacto-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.informacion-contacto{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.informacion-contacto p{
+  margin: 0;
+}
+
+.informacion-contacto a{
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.informacion-contacto i{
+  font-size: 1.2rem;
+  color: #1dcaea;
+}
+
+.informacion-contacto div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.correo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* copyright */
+.copyright {
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 0.75rem;
+  width: 100%;
+}
+
+/* estilos boton de modo claro/oscuro js */
+.boton-tema {
+  background-position: center;
+  background-size: 60%; 
+  background-repeat: no-repeat;
+  border: none;
+  padding: 10px;
+  background-color: #1dcaea; 
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1rem;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: 0 5px 8px rgba(5, 5, 5, 0.5);
+}
+
+/* estilos boton volver arriba */
+
+.boton-volver-arriba {
+  position: fixed;
+  bottom: 1rem;
+  right: 3.8rem;
+  padding: 1.2rem;
+  display: none;
+  z-index: 999;
+  border: none;
+  border-radius: 5px;
+  background-image: url("iconos/flecha-arriba.ico");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent; 
+  width: 0.5rem;
+  height: 0.5rem;
+  cursor: pointer;
+}
