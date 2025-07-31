@@ -6,7 +6,7 @@ const diferencia = hoy.getFullYear() - fechaInicio.getFullYear();
 const meses = (hoy.getFullYear() - fechaInicio.getFullYear()) * 12 + hoy.getMonth() - fechaInicio.getMonth();
 
 if (experiencia) {
-  experiencia.innerHTML = `<span class="color-acento">+${meses} meses</span> de experiencia`;
+  experiencia.innerHTML = `<span class="color-acento">+${meses} meses</span> en formación`;
 }
 
 //** boton tema claro/oscuro **//
