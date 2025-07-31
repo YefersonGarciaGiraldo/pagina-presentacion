@@ -1,5 +1,5 @@
 //** Calcula experiencia desde una fecha fija **// 
-const experiencia = document.getElementById("experiencia");
+const experiencia = document.getElementById("formación");
 const fechaInicio = new Date("2024-10-20"); //AA-MM-DD
 const hoy = new Date();
 const diferencia = hoy.getFullYear() - fechaInicio.getFullYear();
